@@ -26,6 +26,7 @@ target_ptr_t default_get_current_task_struct(CPUState *cpu)
     // userspace clobbers it but kernel restores (somewhow?)
     // First field of struct is task - no offset needed
     current_task_addr=last_r28;
+    struct_get(cpu, &ts, current_task_addr, ki.task.per_cpu_offset_0_addr);
 
 #else // x86/64
     current_task_addr = ki.task.current_task_addr;
