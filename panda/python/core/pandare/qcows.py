@@ -84,7 +84,7 @@ SUPPORTED_IMAGES = {
             snapshot="root",
             url="https://panda-re.mit.edu/qcows/linux/ubuntu/2004/aarch64/ubuntu20_04-aarch64.qcow",
             extra_files=['ubuntu20_04-aarch64-flash0.qcow'],
-            extra_args='-nographic -machine virt -cpu cortex-a57 {DOT_DIR}/ubuntu20_04-aarch64.qcow -drive file={DOT_DIR}/ubuntu20_04-aarch64-flash0.qcow,if=pflash,readonly=on'.format(DOT_DIR=VM_DIR)),
+            extra_args='-nographic -machine virt -cpu cortex-a57 -drive file={DOT_DIR}/ubuntu20_04-aarch64-flash0.qcow,if=pflash,readonly=on'.format(DOT_DIR=VM_DIR)),
     'mips_wheezy': Image(
             arch='mips',
             os="linux-64-debian:3.2.0-4-arm-pae", # XXX wrong
