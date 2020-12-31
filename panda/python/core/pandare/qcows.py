@@ -77,7 +77,7 @@ SUPPORTED_IMAGES = {
 
     'aarch64_focal': Image(
             arch='aarch64',
-            os="linux-64-ubuntu:5.4.0-58-generic",
+            os="linux-64-ubuntu:5.4.0-58-generic-arm64",
             prompt=rb"root@ubuntu-panda:.*# ",
             #cdrom="scsi0-cd2", # No idea what this should be
             default_mem='1G',
