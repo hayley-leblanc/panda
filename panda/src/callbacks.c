@@ -1219,7 +1219,8 @@ void qmp_unload_plugin(int64_t index, Error **errp) {
     if (index >= nb_panda_plugins || index < 0) {
         // TODO: errp
     } else {
-        panda_unload_plugin_idx(index);
+        // panda_unload_plugin_idx(index);
+        panda_do_unload_plugin(index);
     }
 }
 
